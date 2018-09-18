@@ -25,6 +25,14 @@ const xlmProvider = new XlmProvider('testnet'); // or mainnet
 ```javascript
 const privateKey = xlmProvider.createPrivateKey();
 ```
+#### Create private key from mnemonic ####
+```javascript
+const privateKey = xlmProvider.createPrivateKeyFromMnemonic(mnemonic);
+
+let mnemonic = 'absurd green cannon quarter call spray upper diet defense convince live assist'
+or 
+let mnemonic = xlmProvider.generateMnemonic()
+```
 #### Create public key ####
 ```javascript
 const publicKey = xlmProvider.createPublicKey(privateKey);

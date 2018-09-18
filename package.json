@@ -1,6 +1,6 @@
 {
   "name": "xlm-provider",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "makes it easy to work with a lumen wallet",
   "main": "lib/index.js",
   "scripts": {
@@ -11,8 +11,8 @@
   "author": "vlad88vlad",
   "license": "ISC",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/rescrypto/xlm-provider.git"
+    "type": "git",
+    "url": "https://github.com/rescrypto/xlm-provider.git"
   },
   "keywords": [
     "xlm",
@@ -24,7 +24,10 @@
     "wallet"
   ],
   "dependencies": {
-    "stellar-sdk": "^0.9.2"
+    "bip39": "^2.5.0",
+    "stellar-hd-wallet": "0.0.6",
+    "stellar-sdk": "^0.9.2",
+    "tweetnacl": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

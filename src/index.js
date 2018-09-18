@@ -1,4 +1,9 @@
 import * as StellarSdk from 'stellar-sdk';
+import StellarHDWallet from 'stellar-hd-wallet'
+
+
+// let mnemonic = 'sample orphan trade risk blame river cheese leader tired force pool rigid';
+
 
 export default class XlmProvider {
     constructor(network) {
@@ -20,7 +25,12 @@ export default class XlmProvider {
         return pair.secret()
 
     }
-
+    createPrivateKeyFromMnemonic(mnemonic){
+        return StellarHDWallet.fromMnemonic(mnemonic).getSecret(0);
+    }
+    generateMnemonic(){
+        return StellarHDWallet.generateMnemonic()
+    }
     createPublicKey(PrivateKey) {
         let sourceKeyPair = StellarSdk.Keypair.fromSecret(PrivateKey);
         return sourceKeyPair.publicKey();
