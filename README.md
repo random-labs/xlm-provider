@@ -1,6 +1,6 @@
 # Lumen provider #
 
-Makes it easy to work with a bitcoin wallet.
+Makes it easy to work with a lumen wallet.
 
 ## Install ##
 ``` bash
